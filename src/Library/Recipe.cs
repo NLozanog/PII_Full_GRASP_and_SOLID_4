@@ -15,8 +15,10 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        public void AddStep(Step step)
+        //Cambios realizados por CREATOR (Se agrega la creacion de Step a recipe)
+        public void AddStep(Product input, double quantity, Equipment equipment, int time)
         {
+            Step step = new Step (input, quantity, equipment,time);
             this.steps.Add(step);
         }
 
